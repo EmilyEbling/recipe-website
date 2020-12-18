@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Recipe from '../components/recipe/Recipe.js'
+import Recipe from '../../components/recipe/Recipe'
 import axios from 'axios';
 
 class Recipes extends Component {
@@ -20,7 +20,12 @@ class Recipes extends Component {
             .catch(error => console.log(error));
     }
 
-    showRecipes = recipe => <div key={recipe.idrecipe}><Recipe name={recipe.recipe_name}/></div>
+    showRecipes = recipe => 
+    <div key={recipe.idrecipe}>
+        <Recipe name={recipe.recipe_name}
+                ingredients={recipe.ingredients}
+                instructions={recipe.instructions}/>
+    </div>
     render() {
         const { recipes } = this.state;
         return (

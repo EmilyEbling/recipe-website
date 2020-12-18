@@ -1,15 +1,11 @@
-import React from 'react'
+import React from 'react';
+import './recipe.css';
 
 const recipe = (props) => {
-    //var list = props.skills;
+    // var list = props.ingredients;
     return (
         <div className="Recipe">
             <h3>{props.name}</h3>
-            {/* <ul>
-                {list.map(listitem => (
-                    <li key={listitem}>{listitem}</li>
-                ))}
-            </ul> */}
         </div>
     )
 }
